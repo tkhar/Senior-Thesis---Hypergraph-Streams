@@ -1,0 +1,22 @@
+1. n = number of vertices
+2. open file containing the hyperedges: OK
+3. parse file line by line, generating a stream of hyperedges
+
+WARNING: These are not ~~uniform~~ hypergraphs. Therefore, we will 
+be counting various types of simplices simultaneously.
+
+First, we need the ground truth. How does one count simplices EXACTLY? OK
+    * Suppose we want to count 4-simplices:
+    * For every edge e with 3 vertices:
+        For every vertex v not in e:
+            If (v + e form a simplex)
+                count ++;
+    // O(m^2 n) time and O(m) space
+
+First, implement the first improvement with the still bad variance. 
+
+
+Second, implement the improved algorithm with lower variance.
+
+Compare the two algorithms' time and space requirements. Also compare with the space the 
+brute force algorithm needed...
